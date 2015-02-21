@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @landscaping.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @landscaping.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @landscaping.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @landscaping.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @landscaping.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @landscaping.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @landscaping.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @landscaping.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_landscaping_path(@landscaping) %> |
+<%= link_to 'Back', landscapings_path %>

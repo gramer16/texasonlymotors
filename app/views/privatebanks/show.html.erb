@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @privatebank.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @privatebank.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @privatebank.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @privatebank.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @privatebank.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @privatebank.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @privatebank.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @privatebank.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_privatebank_path(@privatebank) %> |
+<%= link_to 'Back', privatebanks_path %>

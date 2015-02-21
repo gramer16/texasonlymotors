@@ -1,0 +1,41 @@
+<h1>Listing solarscreens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @solarscreens.each do |solarscreen| %>
+      <tr>
+        <td><%= solarscreen.company_name %></td>
+        <td><%= solarscreen.company_description %></td>
+        <td><%= solarscreen.address %></td>
+        <td><%= solarscreen.city %></td>
+        <td><%= solarscreen.zipcode %></td>
+        <td><%= solarscreen.contact_name %></td>
+        <td><%= solarscreen.company_website %></td>
+        <td><%= solarscreen.company_phone %></td>
+        <td><%= solarscreen.email %></td>
+        <td><%= link_to 'Show', solarscreen %></td>
+        <td><%= link_to 'Edit', edit_solarscreen_path(solarscreen) %></td>
+        <td><%= link_to 'Destroy', solarscreen, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Solarscreen', new_solarscreen_path %>

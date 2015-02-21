@@ -1,0 +1,39 @@
+<h1>Listing drywalls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drywalls.each do |drywall| %>
+      <tr>
+        <td><%= drywall.company_name %></td>
+        <td><%= drywall.company_description %></td>
+        <td><%= drywall.address %></td>
+        <td><%= drywall.city %></td>
+        <td><%= drywall.zipcode %></td>
+        <td><%= drywall.contact_name %></td>
+        <td><%= drywall.company_website %></td>
+        <td><%= drywall.company_phone %></td>
+        <td><%= link_to 'Show', drywall %></td>
+        <td><%= link_to 'Edit', edit_drywall_path(drywall) %></td>
+        <td><%= link_to 'Destroy', drywall, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Drywall', new_drywall_path %>

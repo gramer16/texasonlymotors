@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @mold.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @mold.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @mold.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @mold.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @mold.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @mold.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @mold.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @mold.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_mold_path(@mold) %> |
+<%= link_to 'Back', molds_path %>

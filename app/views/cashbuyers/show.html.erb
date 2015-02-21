@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @cashbuyer.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @cashbuyer.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @cashbuyer.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @cashbuyer.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @cashbuyer.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @cashbuyer.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @cashbuyer.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @cashbuyer.company_phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @cashbuyer.email %>
+</p>
+
+<%= link_to 'Edit', edit_cashbuyer_path(@cashbuyer) %> |
+<%= link_to 'Back', cashbuyers_path %>

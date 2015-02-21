@@ -1,0 +1,39 @@
+<h1>Listing insulations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @insulations.each do |insulation| %>
+      <tr>
+        <td><%= insulation.company_name %></td>
+        <td><%= insulation.company_description %></td>
+        <td><%= insulation.address %></td>
+        <td><%= insulation.city %></td>
+        <td><%= insulation.zipcode %></td>
+        <td><%= insulation.contact_name %></td>
+        <td><%= insulation.company_website %></td>
+        <td><%= insulation.company_phone %></td>
+        <td><%= link_to 'Show', insulation %></td>
+        <td><%= link_to 'Edit', edit_insulation_path(insulation) %></td>
+        <td><%= link_to 'Destroy', insulation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Insulation', new_insulation_path %>

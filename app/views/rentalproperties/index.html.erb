@@ -1,0 +1,41 @@
+<h1>Listing rentalproperties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rentalproperties.each do |rentalproperty| %>
+      <tr>
+        <td><%= rentalproperty.company_name %></td>
+        <td><%= rentalproperty.company_description %></td>
+        <td><%= rentalproperty.address %></td>
+        <td><%= rentalproperty.city %></td>
+        <td><%= rentalproperty.zipcode %></td>
+        <td><%= rentalproperty.contact_name %></td>
+        <td><%= rentalproperty.company_website %></td>
+        <td><%= rentalproperty.company_phone %></td>
+        <td><%= rentalproperty.email %></td>
+        <td><%= link_to 'Show', rentalproperty %></td>
+        <td><%= link_to 'Edit', edit_rentalproperty_path(rentalproperty) %></td>
+        <td><%= link_to 'Destroy', rentalproperty, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rentalproperty', new_rentalproperty_path %>

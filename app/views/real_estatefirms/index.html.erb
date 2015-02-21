@@ -1,0 +1,39 @@
+<h1>Listing real_estatefirms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @real_estatefirms.each do |real_estatefirm| %>
+      <tr>
+        <td><%= real_estatefirm.company_name %></td>
+        <td><%= real_estatefirm.company_description %></td>
+        <td><%= real_estatefirm.address %></td>
+        <td><%= real_estatefirm.city %></td>
+        <td><%= real_estatefirm.zipcode %></td>
+        <td><%= real_estatefirm.contact_name %></td>
+        <td><%= real_estatefirm.company_website %></td>
+        <td><%= real_estatefirm.company_phone %></td>
+        <td><%= link_to 'Show', real_estatefirm %></td>
+        <td><%= link_to 'Edit', edit_real_estatefirm_path(real_estatefirm) %></td>
+        <td><%= link_to 'Destroy', real_estatefirm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Real estatefirm', new_real_estatefirm_path %>

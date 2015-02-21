@@ -1,0 +1,46 @@
+
+<h4><strong>Find a Semitrailer</strong></h4>
+   <%= form_tag search_cashbuyers_path, method: :get do %>
+          <p>
+        <%= text_field :search, params[:search], placeholder: "Enter a Location (City, Zipcode)",class: "form-control" %>
+         <%= submit_tag "Search", name: nil ,class: "btn btn-warning" %>
+      </p>
+  <% end %>
+
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+      <% @cashbuyers.each do |cashbuyer| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(cashbuyer.image.url), cashbuyer %>
+        <div class="caption">
+          <h4><strong><%= cashbuyer.company_name %></strong></h4>
+          <strong><th>Company Website: </th></strong><br>
+            <%= link_to cashbuyer.company_website, cashbuyer.company_website %><br>
+            <strong><th>Phone Number: </th></strong><br>
+            <%= cashbuyer.company_phone %><br>
+           <strong><th>Address: </th></strong><br>
+           <%= cashbuyer.address %><br> 
+           <strong><th>City: </th></strong><%= cashbuyer.city %><br>
+           <strong><th>Zipcode: </th></strong><br><%= cashbuyer.zipcode %><br>
+           <br>
+           
+           <td><%= link_to 'Show', cashbuyer, class: "btn btn-warning" %></td>
+        
+        <td><%= link_to 'Edit', edit_cashbuyer_path(cashbuyer), class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', cashbuyer, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %></td>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div>   
+   
+
+<br>
+<br>
+
+<%= link_to 'New Semitrailer', new_cashbuyer_path, class: "btn btn-warning" %>

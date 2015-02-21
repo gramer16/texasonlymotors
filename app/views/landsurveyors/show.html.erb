@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @landsurveyor.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @landsurveyor.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @landsurveyor.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @landsurveyor.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @landsurveyor.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @landsurveyor.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @landsurveyor.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @landsurveyor.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_landsurveyor_path(@landsurveyor) %> |
+<%= link_to 'Back', landsurveyors_path %>

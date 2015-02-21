@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @taxspecialist.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @taxspecialist.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @taxspecialist.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @taxspecialist.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @taxspecialist.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @taxspecialist.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @taxspecialist.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @taxspecialist.company_phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @taxspecialist.email %>
+</p>
+
+<%= link_to 'Edit', edit_taxspecialist_path(@taxspecialist) %> |
+<%= link_to 'Back', taxspecialists_path %>

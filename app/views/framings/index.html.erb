@@ -1,0 +1,39 @@
+<h1>Listing framings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @framings.each do |framing| %>
+      <tr>
+        <td><%= framing.company_name %></td>
+        <td><%= framing.company_description %></td>
+        <td><%= framing.address %></td>
+        <td><%= framing.city %></td>
+        <td><%= framing.zipcode %></td>
+        <td><%= framing.contact_name %></td>
+        <td><%= framing.company_website %></td>
+        <td><%= framing.company_phone %></td>
+        <td><%= link_to 'Show', framing %></td>
+        <td><%= link_to 'Edit', edit_framing_path(framing) %></td>
+        <td><%= link_to 'Destroy', framing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Framing', new_framing_path %>

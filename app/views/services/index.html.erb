@@ -1,0 +1,49 @@
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+      <% @services.each do |service| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(service.image.url), service %>
+        <div class="caption">
+          <h4><strong><%= service.company_name %></strong></h4>
+          <strong><th>Company Website: </th></strong><br>
+            <%= link_to service.company_website, service.company_website %>
+            <strong><th>Phone Number: </th></strong><br>
+            <%= service.company_phone %><br>
+           <strong><th>Address: </th></strong><br>
+           <%= service.address %><br> 
+           <strong><th>City: </th></strong><%= service.city %><br>
+           <strong><th>Zipcode: </th></strong><br><%= service.zipcode %><br>
+           <br>
+           
+           <td><%= link_to 'Show', service, class: "btn btn-warning" %></td>
+        <% if (user_signed_in?) && (current_user == service.user) %>
+        <td><%= link_to 'Edit', edit_service_path(service), class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %></td>
+        <% end %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div>
+
+
+  
+
+  
+        
+       
+       
+
+      
+   
+
+<br>
+<br>
+<% if user_signed_in? %>
+<%= link_to 'New Service', new_service_path, class: "btn btn-warning" %>
+ <% end %>

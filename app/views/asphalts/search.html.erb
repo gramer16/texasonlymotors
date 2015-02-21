@@ -1,0 +1,41 @@
+<h4><strong>Search Results:</strong></h4><br>
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+      <% @asphalts.each do |asphalt| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(asphalt.image.url), asphalt %>
+        <div class="caption">
+          <h4><strong><%= asphalt.company_name %></strong></h4>
+          <strong><th>Company Website: </th></strong><br>
+            <%= link_to asphalt.company_website, asphalt.company_website %><br>
+            <strong><th>Phone Number: </th></strong><br>
+            <%= asphalt.company_phone %><br>
+           <strong><th>Address: </th></strong><br>
+           <%= asphalt.address %><br> 
+           <strong><th>City: </th></strong><%= asphalt.city %><br>
+           <strong><th>Zipcode: </th></strong><br><%= asphalt.zipcode %><br>
+           <br>
+           
+           <td><%= link_to 'Show', asphalt, class: "btn btn-warning" %></td>
+        
+        <td><%= link_to 'Edit', edit_asphalt_path(asphalt), class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', asphalt, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %></td>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div>   
+   
+
+<br>
+<br>
+
+
+<%= link_to 'New Asphalt', new_asphalt_path, class: "btn btn-warning" %>
+
+

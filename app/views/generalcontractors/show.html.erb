@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @generalcontractor.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @generalcontractor.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @generalcontractor.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @generalcontractor.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @generalcontractor.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @generalcontractor.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @generalcontractor.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @generalcontractor.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_generalcontractor_path(@generalcontractor) %> |
+<%= link_to 'Back', generalcontractors_path %>

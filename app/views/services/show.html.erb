@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+       <%= image_tag @service.image.url %>
+       <br> 
+      <strong><%= @service.company_name %></strong>
+      <br>
+      <br>
+      <strong>Company Website:</strong>  
+      <%= link_to @service.company_website, @service.company_website %><br>
+      <strong>Type of Service:</strong>
+      <%= @service.service_type %>
+      <br>
+      <strong>Company contact name:</strong>  
+     <%= @service.contact_name %>
+     <br>
+      <strong>Company phone:</strong> 
+     <%= @service.company_phone %><br>
+     <strong>Address:</strong>  
+     <%= @service.address %><br>
+      <strong>City:</strong>  
+     <%= @service.city %><br>
+     <strong>Zipcode:</strong>  
+     <%= @service.zipcode %><br>
+    </div>
+     <br>
+
+  </div>
+  <div class="col-md-6">
+    <h5><strong>General Company Information:</strong></h5>
+    <%= @service.company_description %>
+  </div>
+
+</div>
+
+  <div class ="col-md-12">
+    <div class= "center">
+   <strong>Map View Location:</strong><br>
+   <br>
+<iframe
+  width="800"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUOQ0h7ZYU56FuY9ziMMXURoIlHxC3pfY
+    &q=<%= @service.address.parameterize %>">
+</iframe>
+
+</div>
+<br>
+<br>  
+ </div>
+
+
+
+
+
+
+<% if current_user == @service.user %>
+<%= link_to 'Edit', edit_service_path(@service), class: "btn btn-link" %><% end %> |
+<%= link_to 'Back', services_path, class: "btn btn-link" %>

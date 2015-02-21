@@ -1,0 +1,39 @@
+<h1>Listing homeinspectors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @homeinspectors.each do |homeinspector| %>
+      <tr>
+        <td><%= homeinspector.company_name %></td>
+        <td><%= homeinspector.company_description %></td>
+        <td><%= homeinspector.address %></td>
+        <td><%= homeinspector.city %></td>
+        <td><%= homeinspector.zipcode %></td>
+        <td><%= homeinspector.contact_name %></td>
+        <td><%= homeinspector.company_website %></td>
+        <td><%= homeinspector.company_phone %></td>
+        <td><%= link_to 'Show', homeinspector %></td>
+        <td><%= link_to 'Edit', edit_homeinspector_path(homeinspector) %></td>
+        <td><%= link_to 'Destroy', homeinspector, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Homeinspector', new_homeinspector_path %>

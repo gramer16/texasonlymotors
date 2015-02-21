@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @staging.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @staging.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @staging.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @staging.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @staging.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @staging.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @staging.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @staging.company_phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @staging.email %>
+</p>
+
+<%= link_to 'Edit', edit_staging_path(@staging) %> |
+<%= link_to 'Back', stagings_path %>

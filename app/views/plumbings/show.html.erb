@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @plumbing.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @plumbing.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @plumbing.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @plumbing.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @plumbing.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @plumbing.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @plumbing.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @plumbing.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_plumbing_path(@plumbing) %> |
+<%= link_to 'Back', plumbings_path %>

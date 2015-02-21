@@ -1,0 +1,39 @@
+<h1>Listing landsurveyors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @landsurveyors.each do |landsurveyor| %>
+      <tr>
+        <td><%= landsurveyor.company_name %></td>
+        <td><%= landsurveyor.company_description %></td>
+        <td><%= landsurveyor.address %></td>
+        <td><%= landsurveyor.city %></td>
+        <td><%= landsurveyor.zipcode %></td>
+        <td><%= landsurveyor.contact_name %></td>
+        <td><%= landsurveyor.company_website %></td>
+        <td><%= landsurveyor.company_phone %></td>
+        <td><%= link_to 'Show', landsurveyor %></td>
+        <td><%= link_to 'Edit', edit_landsurveyor_path(landsurveyor) %></td>
+        <td><%= link_to 'Destroy', landsurveyor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Landsurveyor', new_landsurveyor_path %>

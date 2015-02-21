@@ -1,0 +1,40 @@
+
+<h4><strong>Search Results:</strong></h4><br>
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+      <% @arquitects.each do |arquitect| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(arquitect.image.url), arquitect %>
+        <div class="caption">
+          <h4><strong><%= arquitect.company_name %></strong></h4>
+          <strong><th>Company Website: </th></strong><br>
+            <%= link_to arquitect.company_website, arquitect.company_website %><br>
+            <strong><th>Phone Number: </th></strong><br>
+            <%= arquitect.company_phone %><br>
+           <strong><th>Address: </th></strong><br>
+           <%= arquitect.address %><br> 
+           <strong><th>City: </th></strong><%= arquitect.city %><br>
+           <strong><th>Zipcode: </th></strong><br><%= arquitect.zipcode %><br>
+           <br>
+           
+           <td><%= link_to 'Show', arquitect, class: "btn btn-warning" %></td>
+        
+        <td><%= link_to 'Edit', edit_service_path(arquitect), class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', arquitect, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %></td>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div>   
+   
+
+<br>
+<br>
+
+
+<%= link_to 'New Arquitecture Service', new_arquitect_path, class: "btn btn-warning" %>

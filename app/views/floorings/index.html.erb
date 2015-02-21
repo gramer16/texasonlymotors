@@ -1,0 +1,39 @@
+<h1>Listing floorings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @floorings.each do |flooring| %>
+      <tr>
+        <td><%= flooring.company_name %></td>
+        <td><%= flooring.company_description %></td>
+        <td><%= flooring.address %></td>
+        <td><%= flooring.city %></td>
+        <td><%= flooring.zipcode %></td>
+        <td><%= flooring.contact_name %></td>
+        <td><%= flooring.company_website %></td>
+        <td><%= flooring.company_phone %></td>
+        <td><%= link_to 'Show', flooring %></td>
+        <td><%= link_to 'Edit', edit_flooring_path(flooring) %></td>
+        <td><%= link_to 'Destroy', flooring, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Flooring', new_flooring_path %>

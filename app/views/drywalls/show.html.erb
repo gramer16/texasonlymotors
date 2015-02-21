@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @drywall.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @drywall.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @drywall.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @drywall.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @drywall.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @drywall.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @drywall.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @drywall.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_drywall_path(@drywall) %> |
+<%= link_to 'Back', drywalls_path %>

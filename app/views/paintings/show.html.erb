@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @painting.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @painting.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @painting.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @painting.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @painting.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @painting.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @painting.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @painting.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_painting_path(@painting) %> |
+<%= link_to 'Back', paintings_path %>

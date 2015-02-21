@@ -1,0 +1,39 @@
+<h1>Listing mortgages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mortgages.each do |mortgage| %>
+      <tr>
+        <td><%= mortgage.company_name %></td>
+        <td><%= mortgage.company_description %></td>
+        <td><%= mortgage.address %></td>
+        <td><%= mortgage.city %></td>
+        <td><%= mortgage.zipcode %></td>
+        <td><%= mortgage.contact_name %></td>
+        <td><%= mortgage.company_website %></td>
+        <td><%= mortgage.company_phone %></td>
+        <td><%= link_to 'Show', mortgage %></td>
+        <td><%= link_to 'Edit', edit_mortgage_path(mortgage) %></td>
+        <td><%= link_to 'Destroy', mortgage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mortgage', new_mortgage_path %>

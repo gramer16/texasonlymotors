@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @homeinspector.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @homeinspector.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @homeinspector.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @homeinspector.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @homeinspector.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @homeinspector.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @homeinspector.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @homeinspector.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_homeinspector_path(@homeinspector) %> |
+<%= link_to 'Back', homeinspectors_path %>

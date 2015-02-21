@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @insulation.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @insulation.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @insulation.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @insulation.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @insulation.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @insulation.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @insulation.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @insulation.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_insulation_path(@insulation) %> |
+<%= link_to 'Back', insulations_path %>

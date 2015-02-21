@@ -1,0 +1,41 @@
+<h4><strong>Search Results:</strong></h4><br>
+
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+       <% @accountants.each do |accountant| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(accountant.image.url), accountant %>
+        <div class="caption">
+          <h4><strong><%= accountant.company_name %></strong></h4>
+          <strong><th>Company Website: </th></strong><br>
+            <%= link_to accountant.company_website, accountant.company_website %><br>
+            <strong><th>Phone Number: </th></strong><br>
+            <%= accountant.company_phone %><br>
+            <strong><th>Email: </th></strong><br>
+            <%= accountant.email %><br>
+           <strong><th>Address: </th></strong><br>
+           <%= accountant.address %><br> 
+           <strong><th>City: </th></strong><%= accountant.city %><br>
+           <strong><th>Zipcode: </th></strong><br><%= accountant.zipcode %><br>
+           <br>
+
+ 
+        <td><%= link_to 'Show', accountant, class: "btn btn-warning" %></td>
+        <td><%= link_to 'Edit', edit_accountant_path(accountant), class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', accountant, method: :delete, data: { confirm: 'Are you sure?', class: "btn btn-warning" } %></td>
+     </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div>   
+   
+
+<br>
+<br>
+
+<%= link_to 'New Accountant', new_accountant_path, class: "btn btn-warning" %>

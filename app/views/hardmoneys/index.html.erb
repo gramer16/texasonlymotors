@@ -1,0 +1,39 @@
+<h1>Listing hardmoneys</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hardmoneys.each do |hardmoney| %>
+      <tr>
+        <td><%= hardmoney.company_name %></td>
+        <td><%= hardmoney.company_description %></td>
+        <td><%= hardmoney.address %></td>
+        <td><%= hardmoney.city %></td>
+        <td><%= hardmoney.zipcode %></td>
+        <td><%= hardmoney.contact_name %></td>
+        <td><%= hardmoney.company_website %></td>
+        <td><%= hardmoney.company_phone %></td>
+        <td><%= link_to 'Show', hardmoney %></td>
+        <td><%= link_to 'Edit', edit_hardmoney_path(hardmoney) %></td>
+        <td><%= link_to 'Destroy', hardmoney, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hardmoney', new_hardmoney_path %>

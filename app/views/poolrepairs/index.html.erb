@@ -1,0 +1,41 @@
+<h1>Listing poolrepairs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @poolrepairs.each do |poolrepair| %>
+      <tr>
+        <td><%= poolrepair.company_name %></td>
+        <td><%= poolrepair.company_description %></td>
+        <td><%= poolrepair.address %></td>
+        <td><%= poolrepair.city %></td>
+        <td><%= poolrepair.zipcode %></td>
+        <td><%= poolrepair.contact_name %></td>
+        <td><%= poolrepair.company_website %></td>
+        <td><%= poolrepair.company_phone %></td>
+        <td><%= poolrepair.email %></td>
+        <td><%= link_to 'Show', poolrepair %></td>
+        <td><%= link_to 'Edit', edit_poolrepair_path(poolrepair) %></td>
+        <td><%= link_to 'Destroy', poolrepair, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Poolrepair', new_poolrepair_path %>

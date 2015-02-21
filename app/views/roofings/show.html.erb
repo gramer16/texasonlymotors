@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @roofing.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @roofing.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @roofing.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @roofing.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @roofing.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @roofing.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @roofing.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @roofing.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_roofing_path(@roofing) %> |
+<%= link_to 'Back', roofings_path %>

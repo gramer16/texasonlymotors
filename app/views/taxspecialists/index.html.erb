@@ -1,0 +1,41 @@
+<h1>Listing taxspecialists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @taxspecialists.each do |taxspecialist| %>
+      <tr>
+        <td><%= taxspecialist.company_name %></td>
+        <td><%= taxspecialist.company_description %></td>
+        <td><%= taxspecialist.address %></td>
+        <td><%= taxspecialist.city %></td>
+        <td><%= taxspecialist.zipcode %></td>
+        <td><%= taxspecialist.contact_name %></td>
+        <td><%= taxspecialist.company_website %></td>
+        <td><%= taxspecialist.company_phone %></td>
+        <td><%= taxspecialist.email %></td>
+        <td><%= link_to 'Show', taxspecialist %></td>
+        <td><%= link_to 'Edit', edit_taxspecialist_path(taxspecialist) %></td>
+        <td><%= link_to 'Destroy', taxspecialist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Taxspecialist', new_taxspecialist_path %>

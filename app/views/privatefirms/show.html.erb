@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @privatefirm.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @privatefirm.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @privatefirm.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @privatefirm.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @privatefirm.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @privatefirm.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @privatefirm.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @privatefirm.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_privatefirm_path(@privatefirm) %> |
+<%= link_to 'Back', privatefirms_path %>

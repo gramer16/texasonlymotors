@@ -1,0 +1,38 @@
+<h4><strong>Search Results:</strong></h4><br>
+<div class="thumbnail">
+  <div class="center"> 
+    <div class="row">
+      <% @cashbuyers.each do |cashbuyer| %>
+      <div class="col-md-3">
+      <div class="thumbnail">
+        <%= link_to image_tag(cashbuyer.image.url), cashbuyer %>
+        <div class="caption">
+          <h4><strong><%= cashbuyer.company_name %></strong></h4>
+          <strong><th>Company Website: </th></strong><br>
+            <%= link_to cashbuyer.company_website, cashbuyer.company_website %><br>
+            <strong><th>Phone Number: </th></strong><br>
+            <%= cashbuyer.company_phone %><br>
+           <strong><th>Address: </th></strong><br>
+           <%= cashbuyer.address %><br> 
+           <strong><th>City: </th></strong><%= cashbuyer.city %><br>
+           <strong><th>Zipcode: </th></strong><br><%= cashbuyer.zipcode %><br>
+           <br>
+           
+           <td><%= link_to 'Show', cashbuyer, class: "btn btn-warning" %></td>
+        
+        <td><%= link_to 'Edit', edit_cashbuyer_path(cashbuyer), class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', cashbuyer, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %></td>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    </div>
+
+  </div>
+</div>   
+   
+
+<br>
+<br>
+
+<%= link_to 'New Cashbuyer', new_cashbuyer_path, class: "btn btn-warning" %>

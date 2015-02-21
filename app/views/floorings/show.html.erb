@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @flooring.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @flooring.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @flooring.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @flooring.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @flooring.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @flooring.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @flooring.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @flooring.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_flooring_path(@flooring) %> |
+<%= link_to 'Back', floorings_path %>

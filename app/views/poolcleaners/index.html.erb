@@ -1,0 +1,41 @@
+<h1>Listing poolcleaners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @poolcleaners.each do |poolcleaner| %>
+      <tr>
+        <td><%= poolcleaner.company_name %></td>
+        <td><%= poolcleaner.company_description %></td>
+        <td><%= poolcleaner.address %></td>
+        <td><%= poolcleaner.city %></td>
+        <td><%= poolcleaner.zipcode %></td>
+        <td><%= poolcleaner.contact_name %></td>
+        <td><%= poolcleaner.company_website %></td>
+        <td><%= poolcleaner.company_phone %></td>
+        <td><%= poolcleaner.email %></td>
+        <td><%= link_to 'Show', poolcleaner %></td>
+        <td><%= link_to 'Edit', edit_poolcleaner_path(poolcleaner) %></td>
+        <td><%= link_to 'Destroy', poolcleaner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Poolcleaner', new_poolcleaner_path %>

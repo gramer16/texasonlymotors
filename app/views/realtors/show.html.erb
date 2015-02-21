@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @realtor.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @realtor.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @realtor.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @realtor.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @realtor.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @realtor.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @realtor.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @realtor.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_realtor_path(@realtor) %> |
+<%= link_to 'Back', realtors_path %>

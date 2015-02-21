@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @lawyer.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @lawyer.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @lawyer.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @lawyer.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @lawyer.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @lawyer.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @lawyer.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @lawyer.company_phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @lawyer.email %>
+</p>
+
+<%= link_to 'Edit', edit_lawyer_path(@lawyer) %> |
+<%= link_to 'Back', lawyers_path %>

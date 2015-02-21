@@ -1,0 +1,69 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/pages/home"><%= image_tag("texasmap.png", :size => "60x60", :alt => "Navbar Header", :style =>"margin-right:25px; margin-top:-14px;" ) %></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/pages/home" style="margin-right 20px">Home</a></li>
+        <li><a href="/pages/membership">Advertise a Motors Service</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Find All in Motors <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/residentials/new">New Motors Sale</a></li>
+            <li><a href="/commercialpropertiesforsales/new">Used Motors Sale</a></li>
+            <li><a href="/commercialpropertiesforsales/new">Motors Services</a></li>
+          </ul>
+          </li>
+          <li><a href="/pages/contactus">About us</a></li>
+
+          </ul>
+         
+        </li>
+      </ul>
+
+       <ul class="nav navbar-nav navbar-right">
+      <% if user_signed_in? %>
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name %> <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Purchase History", purchases_path %></li>
+            <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+          </ul>
+        </li>
+      <% else %>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Create Account or Sign In <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+        <li>Not a Member?<%= link_to "Create a Ontario's Only Account", new_user_registration_path %></li>
+
+        <li>Already a Member?<%= link_to "Sign in to Your Ontario's Only Account", new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+<div class="page-header">
+  <div class ="center">
+    <div class ="image-size">
+    <%= image_tag("texasonlymotorsheader.jpg", :alt => "Header", :style=>"padding-top:80px; max-height:45%; min-width:45%;") %>
+ </div>
+</div>
+  <h4 style="font-family:Calibri", align="center"><font color="c50013"><font size="10">Everything Motors - Only Motors</font></font>
+</div>
+<!--<div class="page-header">
+  <h1>FLORIDA'S ONLY <small>Everything Real Estate</small></h1>
+</div>-->
+<!--<h1 style="font-family:Arial Black", align="center"><font size="600">FLORIDA'S ONLY</font></h1>
+<h3 style="font-family:Basic", align="center"><font color="Orange">Everything Real Estate and Only Real Estate</font></h3>-->

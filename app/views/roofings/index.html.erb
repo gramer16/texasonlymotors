@@ -1,0 +1,39 @@
+<h1>Listing roofings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @roofings.each do |roofing| %>
+      <tr>
+        <td><%= roofing.company_name %></td>
+        <td><%= roofing.company_description %></td>
+        <td><%= roofing.address %></td>
+        <td><%= roofing.city %></td>
+        <td><%= roofing.zipcode %></td>
+        <td><%= roofing.contact_name %></td>
+        <td><%= roofing.company_website %></td>
+        <td><%= roofing.company_phone %></td>
+        <td><%= link_to 'Show', roofing %></td>
+        <td><%= link_to 'Edit', edit_roofing_path(roofing) %></td>
+        <td><%= link_to 'Destroy', roofing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Roofing', new_roofing_path %>

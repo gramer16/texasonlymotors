@@ -1,0 +1,39 @@
+<h1>Listing privatefirms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @privatefirms.each do |privatefirm| %>
+      <tr>
+        <td><%= privatefirm.company_name %></td>
+        <td><%= privatefirm.company_description %></td>
+        <td><%= privatefirm.address %></td>
+        <td><%= privatefirm.city %></td>
+        <td><%= privatefirm.zipcode %></td>
+        <td><%= privatefirm.contact_name %></td>
+        <td><%= privatefirm.company_website %></td>
+        <td><%= privatefirm.company_phone %></td>
+        <td><%= link_to 'Show', privatefirm %></td>
+        <td><%= link_to 'Edit', edit_privatefirm_path(privatefirm) %></td>
+        <td><%= link_to 'Destroy', privatefirm, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Privatefirm', new_privatefirm_path %>

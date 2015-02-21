@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @hardmoney.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @hardmoney.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @hardmoney.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @hardmoney.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @hardmoney.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @hardmoney.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @hardmoney.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @hardmoney.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_hardmoney_path(@hardmoney) %> |
+<%= link_to 'Back', hardmoneys_path %>

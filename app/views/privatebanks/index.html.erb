@@ -1,0 +1,39 @@
+<h1>Listing privatebanks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Company name</th>
+      <th>Company description</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Zipcode</th>
+      <th>Contact name</th>
+      <th>Company website</th>
+      <th>Company phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @privatebanks.each do |privatebank| %>
+      <tr>
+        <td><%= privatebank.company_name %></td>
+        <td><%= privatebank.company_description %></td>
+        <td><%= privatebank.address %></td>
+        <td><%= privatebank.city %></td>
+        <td><%= privatebank.zipcode %></td>
+        <td><%= privatebank.contact_name %></td>
+        <td><%= privatebank.company_website %></td>
+        <td><%= privatebank.company_phone %></td>
+        <td><%= link_to 'Show', privatebank %></td>
+        <td><%= link_to 'Edit', edit_privatebank_path(privatebank) %></td>
+        <td><%= link_to 'Destroy', privatebank, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Privatebank', new_privatebank_path %>

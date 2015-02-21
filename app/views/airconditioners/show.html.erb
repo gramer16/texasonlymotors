@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+       <%= image_tag @airconditioner.image.url %>
+       <br> 
+      <strong><%= @airconditioner.company_name %></strong>
+      <br>
+      <br>
+      <strong>Company Website:</strong>  
+      <%= link_to @airconditioner.company_website, @airconditioner.company_website %><br>
+      
+      
+      <strong>Company contact name:</strong>  
+     <%= @airconditioner.contact_name %>
+     <br>
+      <strong>Company phone:</strong> 
+     <%= @airconditioner.company_phone %><br>
+     <strong>Address:</strong>  
+     <%= @airconditioner.address %><br>
+      <strong>City:</strong>  
+     <%= @airconditioner.city %><br>
+     <strong>Zipcode:</strong>  
+     <%= @airconditioner.zipcode %><br>
+    </div>
+     <br>
+
+  </div>
+  <div class="col-md-6">
+    <h5><strong>General Company Information:</strong></h5>
+    <%= @airconditioner.company_description %>
+  </div>
+
+</div>
+
+  <div class ="col-md-12">
+    <div class= "center">
+   <strong>Map View Location:</strong><br>
+   <br>
+<iframe
+  width="800"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUOQ0h7ZYU56FuY9ziMMXURoIlHxC3pfY
+    &q=<%= @airconditioner.address.parameterize %>">
+</iframe>
+
+</div>
+<br>
+<br>  
+ </div>
+
+
+
+<%= link_to 'Edit', edit_airconditioner_path(@airconditioner), class: "btn btn-link" %> |
+<%= link_to 'Back', airconditioners_path, class: "btn btn-link" %>

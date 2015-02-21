@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @framing.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @framing.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @framing.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @framing.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @framing.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @framing.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @framing.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @framing.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_framing_path(@framing) %> |
+<%= link_to 'Back', framings_path %>

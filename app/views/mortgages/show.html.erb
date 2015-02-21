@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @mortgage.company_name %>
+</p>
+
+<p>
+  <strong>Company description:</strong>
+  <%= @mortgage.company_description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @mortgage.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @mortgage.city %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @mortgage.zipcode %>
+</p>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @mortgage.contact_name %>
+</p>
+
+<p>
+  <strong>Company website:</strong>
+  <%= @mortgage.company_website %>
+</p>
+
+<p>
+  <strong>Company phone:</strong>
+  <%= @mortgage.company_phone %>
+</p>
+
+<%= link_to 'Edit', edit_mortgage_path(@mortgage) %> |
+<%= link_to 'Back', mortgages_path %>

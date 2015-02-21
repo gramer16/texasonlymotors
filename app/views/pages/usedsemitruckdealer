@@ -1,0 +1,135 @@
+<div class="row" id="featuresHeading">
+    <div class="col-12">
+        <h2 style="font-family:Arial">USED SEMI  / COMMERCIAL TRUCK DEALERSHIPS</h2>
+        <p class="lead"></p>
+    </div>
+</div>
+<div class="row" id="features">
+    <div class="col-md-4 feature">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">FREIGHTLINER</h3>
+            </div>
+            <%= image_tag("freightliner.png", :size => "150x100", :alt => "Architect", :style =>"margin-right:25px; margin-top:10px;" ) %>
+            <p></p>
+            <a href="/arquitects" target="_self" class="btn btn-default"><strong>Search</strong></a>
+        </div>
+    </div>
+<div class="col-md-4 feature">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">FORD</h3>
+            </div>
+             <%= image_tag("ford.png", :size => "150x100", :alt => "Architect", :style =>"margin-right:25px; margin-top:10px;" ) %>
+            <p></p>
+            <a href="/airconditioners" target="_self" class="btn btn-default"><strong>Search</strong></a>
+        </div>
+</div>
+<div class="col-md-4 feature">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">GMC</h3>
+            </div>
+              <%= image_tag("gmc.jpg", :size => "130x100", :alt => "Architect", :style =>"margin-right:25px; margin-top:10px;" ) %>
+            <p></p>
+            <a href="/asphalts" target="_self" class="btn btn-default"><strong>Search</strong></a>
+        </div>
+        </div>
+</div>
+<div class="row" id="features">
+        <div class="col-md-4 feature">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">HINO</h3>
+            </div>
+             <%= image_tag("hino.jpg", :size => "150x100", :alt => "Bank", :style =>"margin-right:25px; margin-top:10px;" ) %>
+            <p></p>
+            <a href="/privatebanks" target="_self" class="btn btn-default"><strong>Search</strong></a>
+        </div>
+        </div>
+        <div class="col-md-4 feature">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">INTERNATIONAL</h3>
+            </div>
+            
+             <%= image_tag("international.jpg", :size => "100x100", :alt => "CashBuyer", :style =>"margin-right:25px; margin-top:10px;" ) %>
+            <p></p>
+            <a href="/cashbuyers" target="_self" class="btn btn-default"><strong>Search</strong></a>
+        </div>
+        </div>
+         <div class="col-md-4 feature">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">KENWORTH</h3>
+            </div>
+             <%= image_tag("kenworth.jpg", :size => "150x100", :alt => "CustomCabinets", :style =>"margin-right:25px; margin-top:10px;" ) %>
+            <p></p>
+            <a href="/customcabinets" target="_self" class="btn btn-default"><strong>Search</strong></a>
+        </div>
+        </div>
+</div>
+<div class="row" id="features">
+        <div class="col-md-4 feature">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">MACK</h3>
+            </div>
+             <%= image_tag("mack.jpg", :size => "120x100", :alt => "Countertop", :style =>"margin-right:25px; margin-top:10px;" ) %>
+            <p></p>
+            <a href="/countertops" target="_self" class="btn btn-default"><strong>Search</strong></a>
+        </div>
+        </div>
+        <div class="col-md-4 feature">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">MERCEDES-BENZ</h3>
+            </div>
+             <%= image_tag("mercedes.jpg", :size => "150x100", :alt => "Drywall", :style =>"margin-right:25px; margin-top:10px;" ) %>
+            <p></p>
+            <a href="/drywalls" target="_self" class="btn btn-default"><strong>Search</strong></a>
+        </div>
+        </div>
+         <div class="col-md-4 feature">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">PETERBILT</h3>
+            </div>
+             <%= image_tag("Peter.jpg", :size => "120x100", :alt => "Framing", :style =>"margin-right:25px; margin-top:10px;" ) %>
+            <p></p>
+            <a href="/framings" target="_self" class="btn btn-default"><strong>Search</strong></a>
+        </div>
+        </div>
+</div>
+<div class="row" id="features">
+        <div class="col-md-4 feature">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">STERLING</h3>
+            </div>
+             <%= image_tag("sterling.jpg", :size => "150x100", :alt => "Flooring", :style =>"margin-right:25px; margin-top:10px;" ) %>
+            <p></p>
+            <a href="/floorings" target="_self" class="btn btn-default"><strong>Search</strong></a>
+        </div>
+        </div>
+        <div class="col-md-4 feature">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">VOLVO</h3>
+            </div>
+             <%= image_tag("volvo.png", :size => "100x100", :alt => "GeneralContractor", :style =>"margin-right:25px; margin-top:10px;" ) %>
+            <p></p>
+            <a href="/generalcontractors" target="_self" class="btn btn-default"><strong>Search</strong></a>
+        </div>
+        </div>
+         <div class="col-md-4 feature">
+        <div class="panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">WESTERN STAR</h3>
+            </div>
+             <%= image_tag("westernstar.jpg", :size => "120x100", :alt => "Homeinspector", :style =>"margin-right:25px; margin-top:10px;" ) %>
+            <p></p>
+            <a href="/homeinspectors" target="_self" class="btn btn-default"><strong>Search</strong></a>
+        </div>
+        </div>
+</div>
