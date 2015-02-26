@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121054021) do
+ActiveRecord::Schema.define(version: 20150226034245) do
 
   create_table "accountants", force: true do |t|
     t.string   "company_name"
@@ -809,11 +809,17 @@ ActiveRecord::Schema.define(version: 20141121054021) do
     t.text     "address"
     t.integer  "zipcode"
     t.string   "city"
-    t.integer  "phone"
+    t.string   "phone"
     t.string   "contact"
     t.string   "company_email"
     t.string   "card_name"
     t.text     "bill_address"
+    t.string   "sellerid"
+    t.text     "description"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "taxspecialists", force: true do |t|

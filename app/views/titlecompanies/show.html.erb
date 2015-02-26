@@ -1,49 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <%= image_tag @subscription.image.url %>
+      <strong><%= @subscription.company_name %></strong>
+      <br>
+      <br>
+      <strong>Company website:</strong>
+      <%= link_to @subscription.website, @subscription.website %><br>
+      <strong>Company phone:</strong>
+     <%= @subscription.phone %><br>
+     <strong>Address:</strong>
+     <%= @subscription.address %><br>
+      <strong>City:</strong> 
+     <%= @subscription.city %><br>
+     <strong>Zipcode:</strong>
+     <%= @subscription.zipcode %><br>
+    </div>
+     <br>
 
-<p>
-  <strong>Company name:</strong>
-  <%= @titlecompany.company_name %>
-</p>
+  </div>
+  <div class="col-md-6">
+<iframe
+  width="500"
+  height="180"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAUOQ0h7ZYU56FuY9ziMMXURoIlHxC3pfY
+    &q=<%= @subscription.address.parameterize %>">
+</iframe>
+  </div>
 
-<p>
-  <strong>Company description:</strong>
-  <%= @titlecompany.company_description %>
-</p>
+</div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @titlecompany.address %>
-</p>
 
-<p>
-  <strong>City:</strong>
-  <%= @titlecompany.city %>
-</p>
-
-<p>
-  <strong>Zipcode:</strong>
-  <%= @titlecompany.zipcode %>
-</p>
-
-<p>
-  <strong>Contact name:</strong>
-  <%= @titlecompany.contact_name %>
-</p>
-
-<p>
-  <strong>Company website:</strong>
-  <%= @titlecompany.company_website %>
-</p>
-
-<p>
-  <strong>Company phone:</strong>
-  <%= @titlecompany.company_phone %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @titlecompany.email %>
-</p>
-
-<%= link_to 'Edit', edit_titlecompany_path(@titlecompany) %> |
-<%= link_to 'Back', titlecompanies_path %>
+<%= link_to 'Edit', edit_subscription_path(@subscription), class: "btn btn-link" %> |
+<%= link_to 'Back', subscriptions_path, class: "btn btn-link" %>
