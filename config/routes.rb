@@ -97,7 +97,12 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :airconditioners
+  resources :airconditioners do
+    collection do
+      get 'search'
+      get :autocomplete
+    end
+  end
       
 
   resources :arquitects do

@@ -1,5 +1,6 @@
 class AirconditionersController < ApplicationController
   before_action :set_airconditioner, only: [:show, :edit, :update, :destroy]
+  before_action :check_user, only: [:destroy, :edit]
 
 
   def search
@@ -73,8 +74,8 @@ class AirconditionersController < ApplicationController
       params.require(:airconditioner).permit(:company_name, :company_description, :address, :city, :zipcode, :contact_name, :company_website, :company_phone, :image)
     end
     def check_user
-      if current_user != @subscriptionpackage.user
-        redirect_to root_url, alert: "Sorry, this listing belongs to someone else"
-      end
+        unless current_user.admin?
+         redirect_to root_url, alert: "Sorry, Only Texas's Only Admin can Delete a Client"
     end
+  end
 end
