@@ -90,6 +90,7 @@ Rails.application.routes.draw do
   resources :subscriptionpackages do
     resources :orders
   end
+  
   resources :asphalts do
     collection do
       get 'search'
@@ -104,7 +105,6 @@ Rails.application.routes.draw do
     end
   end
       
-
   resources :arquitects do
     collection do
       get 'search'

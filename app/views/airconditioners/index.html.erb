@@ -1,7 +1,7 @@
-   <h4><strong>Find a New Air Conditioner Service</strong></h4>
+   <h4><strong>Find a New Motor Service</strong></h4>
    <%= form_tag search_airconditioners_path, method: :get do %>
           <p>
-        <%= text_field :search, params[:search], placeholder: "Enter a Location (City, Zipcode)",class: "form-control" %>
+        <%= text_field :search, params[:search], placeholder: "Enter a Location (City, Zipcode)",class: "form-control" %><br>
          <%= submit_tag "Search", name: nil ,class: "btn btn-success" %>
       </p>
   <% end %>
