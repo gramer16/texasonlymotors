@@ -19,10 +19,11 @@
            <strong><th>Zipcode: </th></strong><br><%= arquitect.zipcode %><br>
            <br>
            
-           <td><%= link_to 'Show', arquitect, class: "btn btn-warning" %></td>
-        
-        <td><%= link_to 'Edit', edit_service_path(arquitect), class: "btn btn-warning" %></td>
+           <td><%= link_to 'Show', arquitect, class: "btn btn-success" %></td>
+         <% if user_signed_in? && current_user.admin? %>
+        <td><%= link_to 'Edit', edit_service_path(arquitect), class: "btn btn-success" %></td>
         <td><%= link_to 'Destroy', arquitect, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %></td>
+         <% end %>
         </div>
       </div>
     </div>
@@ -35,6 +36,4 @@
 
 <br>
 <br>
-
-
-<%= link_to 'New Arquitecture Service', new_arquitect_path, class: "btn btn-warning" %>
+<%= link_to 'Back', arquitects_path, class: "btn btn-link" %>
