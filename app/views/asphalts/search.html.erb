@@ -9,7 +9,7 @@
         <div class="caption">
           <h4><strong><%= asphalt.company_name %></strong></h4>
           <strong><th>Company Website: </th></strong><br>
-            <%= link_to asphalt.company_website, asphalt.company_website %><br>
+            <%= link_to asphalt.company_website, asphalt.company_website, :target => "_blank" %><br>
             <strong><th>Phone Number: </th></strong><br>
             <%= asphalt.company_phone %><br>
            <strong><th>Address: </th></strong><br>
@@ -19,9 +19,10 @@
            <br>
            
            <td><%= link_to 'Show', asphalt, class: "btn btn-warning" %></td>
-        
+        <% if user_signed_in? && current_user.admin? %>
         <td><%= link_to 'Edit', edit_asphalt_path(asphalt), class: "btn btn-warning" %></td>
         <td><%= link_to 'Destroy', asphalt, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %></td>
+        <% end %>
         </div>
       </div>
     </div>
@@ -36,6 +37,6 @@
 <br>
 
 
-<%= link_to 'New Asphalt', new_asphalt_path, class: "btn btn-warning" %>
+<%= link_to 'Back', asphalts_path, class: "btn btn-link" %>
 
 

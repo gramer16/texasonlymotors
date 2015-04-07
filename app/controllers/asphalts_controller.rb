@@ -1,6 +1,6 @@
 class AsphaltsController < ApplicationController
   before_action :set_asphalt, only: [:show, :edit, :update, :destroy]
-
+  before_action :check_user, only: [:destroy, :edit]
 
 def search
     if params[:search].present?
@@ -74,4 +74,9 @@ def search
     def asphalt_params
       params.require(:asphalt).permit(:company_name, :company_description, :address, :city, :zipcode, :contact_name, :company_website, :company_phone, :image)
     end
+    def check_user
+        unless current_user.admin?
+         redirect_to root_url, alert: "Sorry, Only Texas's Only Admin can Delete a Client"
+    end
+  end
 end
