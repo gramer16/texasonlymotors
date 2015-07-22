@@ -2,13 +2,15 @@ class AsphaltsController < ApplicationController
   before_action :set_asphalt, only: [:show, :edit, :update, :destroy]
   before_action :check_user, only: [:destroy, :edit]
 
+
 def search
     if params[:search].present?
-     @asphalts = Asphalt.search(params[:search])
+      @asphalts = Asphalt.search(params[:search])
     else
       @asphalts = Asphalt.all
     end
   end
+
 
   def autocomplete
     render json: Asphalt.search(params[:query], fields:[{name: :text_start}], limit: 10).map(&:name)

@@ -8,23 +8,22 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/pages/home"><%= image_tag("texasmap.png", :size => "60x60", :alt => "Navbar Header", :style =>"margin-right:25px; margin-top:-14px;" ) %></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/pages/home" style="margin-right 20px">Home</a></li>
-        <li><a href="/pages/membership">Advertise a Motors Service</a></li>
+        <li><a href="/pages/home" style="margin-right 20px">Pagina Principal</a></li>
+        <li><a href="/pages/membership">Anunciar un Servicio Motorizado</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Find All in Motors <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Encontrar Todos los Servicios <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="/residentials/new">New Motors Sale</a></li>
-            <li><a href="/commercialpropertiesforsales/new">Used Motors Sale</a></li>
-            <li><a href="/commercialpropertiesforsales/new">Motors Services</a></li>
+            <li><a href="/residentials/new">Venta de Nuevos Servicios Motorizados</a></li>
+            <li><a href="/commercialpropertiesforsales/new">Venta de Servicios Motorizados Usados</a></li>
+            <li><a href="/commercialpropertiesforsales/new">Servicios Motorizados</a></li>
           </ul>
           </li>
-          <li><a href="/pages/contactus">About us</a></li>
+          <li><a href="/pages/contactus">Acerca de Nosotros</a></li>
 
           </ul>
          
@@ -44,11 +43,11 @@
         </li>
       <% else %>
          <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Create Account or Sign In <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registrarse o Iniciar Sesion <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-        <li>Not a Member?<%= link_to "Create a Texas's Only Account", new_user_registration_path %></li>
+        <li>No es un Miembro?<%= link_to "Create a Honduras's Only Account", new_user_registration_path %></li>
 
-        <li>Already a Member?<%= link_to "Sign in to Your Texas's Only Account", new_user_session_path %></li>
+        <li>Ya es Miembro?<%= link_to "Sign in to Your Honduras's Only Account", new_user_session_path %></li>
       <% end %>
     </ul>
   </div><!-- /.navbar-collapse -->
@@ -57,10 +56,10 @@
 <div class="page-header">
   <div class ="center">
     <div class ="image-size">
-    <%= image_tag("texasonlymotorsheader.jpg", :alt => "Header", :style=>"padding-top:80px; max-height:45%; min-width:45%;") %>
+    <%= image_tag("hondurasheader.jpg", :alt => "Header", :style=>"padding-top:80px; max-height:45%; min-width:45%;") %>
  </div>
 </div>
-  <h4 style="font-family:Calibri", align="center"><font color="c50013"><font size="10"><%= title 'Everything Motors - Only Motors' %></font></font>
+  <h4 style="font-family:Calibri", align="center"><font color="c50013"><font size="10"><%= title 'Todo Motores - Solo Motores' %></font></font>
 </div>
 <!--<div class="page-header">
   <h1>FLORIDA'S ONLY <small>Everything Real Estate</small></h1>

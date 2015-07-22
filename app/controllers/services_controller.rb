@@ -4,9 +4,6 @@ class ServicesController < ApplicationController
   before_filter :check_user, only: [:edit, :update, :destroy]
   
  
-
-
-
   def index
     @services = Service.all
   end
